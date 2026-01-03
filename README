@@ -1,9 +1,10 @@
 🚗 Multi-Mode Embedded Robot Car
 This repository contains multiple versions of an embedded robot car project developed for an Embedded Systems course.
 Each version demonstrates a different control method, progressing from basic autonomous behavior to a fully integrated multi-mode system.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 📁 Project Versions
-1️⃣ Autonomous(maincar)
+1️⃣ Autonomous(maincar.ino)
 Ultrasonic-based obstacle avoidance
 
 Servo scanning for left/right distance measurement
@@ -11,8 +12,9 @@ Servo scanning for left/right distance measurement
 Automatic path decision without user input
 
 Key concepts: sensor integration, real-time control logic
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-2️⃣ IR
+2️⃣ IR(ir-control-car.ino)
 Manual control using an IR remote (KY-022)
 
 Directional movement and stop control
@@ -20,8 +22,9 @@ Directional movement and stop control
 Direct motor actuation via remote commands
 
 Key concepts: IR communication, event-driven input
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-3️⃣ Bluetooth
+3️⃣ Bluetooth(bluetooth)
 Android phone control using HC-06 (ZS-040)
 
 UART communication via SoftwareSerial
@@ -29,8 +32,9 @@ UART communication via SoftwareSerial
 Character-based command protocol
 
 Key concepts: serial communication, wireless control
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-4️⃣ Autonomous + IR
+4️⃣ Autonomous + IR(IR-REMOTE-MAIN)
 Default autonomous navigation
 
 IR remote provides manual override
@@ -38,8 +42,9 @@ IR remote provides manual override
 Mode switching between auto and manual control
 
 Key concepts: mode switching, control priority
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-5️⃣ All Combined (Final Version)
+5️⃣ All Combined (Final Version) (bluetooth-ir-aut_combined)
 Autonomous navigation
 
 IR remote control
@@ -48,6 +53,8 @@ Bluetooth mobile control
 
 Mode arbitration ensures only one control source drives the motors at a time
 
+With Mode switching commands check how to control the car depending on the command
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Control Priority:
 
 Bluetooth
@@ -57,6 +64,7 @@ IR Remote
 Autonomous
 
 Key concepts: system integration, state-based control, modular embedded design
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 🛠️ Hardware Used
 Arduino Uno (CH340)
@@ -70,8 +78,8 @@ Servo motor
 IR receiver (KY-022)
 
 Bluetooth module (HC-06 / ZS-040)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 🎓 Educational Focus
 This project demonstrates embedded systems principles including peripheral integration, UART communication, real-time control, and multi-mode system architecture.
 
-With Mode switching commands check how to control the car depending on the command
