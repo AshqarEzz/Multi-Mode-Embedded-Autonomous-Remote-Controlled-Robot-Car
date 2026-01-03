@@ -1,0 +1,131 @@
+🚗 Multi-Mode Embedded Autonomous & Remote-Controlled Robot Car
+📌 Project Overview
+
+This project is a multi-mode embedded robot car designed and implemented as part of an Embedded Systems course.
+The system integrates autonomous navigation, infrared remote control, and Bluetooth mobile control into a single, unified control architecture.
+
+The robot demonstrates sensor integration, real-time motor control, UART communication, and mode arbitration, making it a complete embedded control system rather than a single-sensor demo.
+
+⚙️ Features
+
+🤖 Autonomous Obstacle Avoidance
+
+Ultrasonic distance sensing
+
+Servo-based left/right scanning
+
+Dynamic path selection based on free space
+
+📺 IR Remote Control Mode (KY-022)
+
+Real-time manual control using an IR remote
+
+Immediate override of autonomous behavior
+
+📱 Bluetooth Control Mode (HC-06 / ZS-040)
+
+Android phone control via Bluetooth
+
+UART communication using SoftwareSerial
+
+Simple character-based command protocol
+
+🔁 Multi-Mode Architecture
+
+Three operating modes: Autonomous, IR, Bluetooth
+
+Only one active mode at a time
+
+Manual modes have higher priority than autonomous mode
+
+🧠 System Architecture
+
+The system is implemented as a state-based controller, where each input source (ultrasonic sensor, IR receiver, Bluetooth module) is handled independently.
+A mode controller ensures safe arbitration so that motor outputs are driven by only one control source at any time.
+
+Control Priority:
+
+Bluetooth (highest)
+
+IR Remote
+
+Autonomous Navigation (default)
+
+🛠️ Hardware Components
+
+Arduino Uno (CH340 USB interface)
+
+L298N Motor Driver
+
+Ultrasonic Sensor (HC-SR04 compatible)
+
+Servo Motor
+
+IR Receiver (KY-022)
+
+IR Remote Control
+
+Bluetooth Module (HC-06 / ZS-040)
+
+DC Motors + Chassis
+
+💻 Software & Libraries
+
+Arduino IDE
+
+NewPing (Ultrasonic sensor handling)
+
+Servo
+
+IRremote
+
+SoftwareSerial
+
+📡 Control Summary
+Autonomous Mode
+
+Moves forward
+
+Detects obstacles ≤ 45 cm
+
+Reverses, scans left/right, and selects optimal direction
+
+IR Remote Mode
+
+UP → Forward
+
+DOWN → Backward
+
+LEFT → Turn Left
+
+RIGHT → Turn Right
+
+OK → Stop
+
+Bluetooth Mode (Android)
+
+F → Forward
+
+B → Backward
+
+L → Left
+
+R → Right
+
+S → Stop
+
+🎓 Educational Value
+
+This project demonstrates key embedded systems concepts:
+
+Peripheral integration
+
+Serial communication (UART)
+
+Real-time control logic
+
+Modular software design
+
+State machines and mode arbitration
+
+It goes beyond single-sensor examples by showing how multiple input sources can coexist in a reliable embedded system.
