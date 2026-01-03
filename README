@@ -1,131 +1,77 @@
-🚗 Multi-Mode Embedded Autonomous & Remote-Controlled Robot Car
-📌 Project Overview
+🚗 Multi-Mode Embedded Robot Car
+This repository contains multiple versions of an embedded robot car project developed for an Embedded Systems course.
+Each version demonstrates a different control method, progressing from basic autonomous behavior to a fully integrated multi-mode system.
 
-This project is a multi-mode embedded robot car designed and implemented as part of an Embedded Systems course.
-The system integrates autonomous navigation, infrared remote control, and Bluetooth mobile control into a single, unified control architecture.
+📁 Project Versions
+1️⃣ Autonomous
+Ultrasonic-based obstacle avoidance
 
-The robot demonstrates sensor integration, real-time motor control, UART communication, and mode arbitration, making it a complete embedded control system rather than a single-sensor demo.
+Servo scanning for left/right distance measurement
 
-⚙️ Features
+Automatic path decision without user input
 
-🤖 Autonomous Obstacle Avoidance
+Key concepts: sensor integration, real-time control logic
 
-Ultrasonic distance sensing
+2️⃣ IR
+Manual control using an IR remote (KY-022)
 
-Servo-based left/right scanning
+Directional movement and stop control
 
-Dynamic path selection based on free space
+Direct motor actuation via remote commands
 
-📺 IR Remote Control Mode (KY-022)
+Key concepts: IR communication, event-driven input
 
-Real-time manual control using an IR remote
+3️⃣ Bluetooth
+Android phone control using HC-06 (ZS-040)
 
-Immediate override of autonomous behavior
+UART communication via SoftwareSerial
 
-📱 Bluetooth Control Mode (HC-06 / ZS-040)
+Character-based command protocol
 
-Android phone control via Bluetooth
+Key concepts: serial communication, wireless control
 
-UART communication using SoftwareSerial
+4️⃣ Autonomous + IR
+Default autonomous navigation
 
-Simple character-based command protocol
+IR remote provides manual override
 
-🔁 Multi-Mode Architecture
+Mode switching between auto and manual control
 
-Three operating modes: Autonomous, IR, Bluetooth
+Key concepts: mode switching, control priority
 
-Only one active mode at a time
+5️⃣ All Combined (Final Version)
+Autonomous navigation
 
-Manual modes have higher priority than autonomous mode
+IR remote control
 
-🧠 System Architecture
+Bluetooth mobile control
 
-The system is implemented as a state-based controller, where each input source (ultrasonic sensor, IR receiver, Bluetooth module) is handled independently.
-A mode controller ensures safe arbitration so that motor outputs are driven by only one control source at any time.
+Mode arbitration ensures only one control source drives the motors at a time
 
 Control Priority:
 
-Bluetooth (highest)
+Bluetooth
 
 IR Remote
 
-Autonomous Navigation (default)
+Autonomous
 
-🛠️ Hardware Components
+Key concepts: system integration, state-based control, modular embedded design
 
-Arduino Uno (CH340 USB interface)
+🛠️ Hardware Used
+Arduino Uno (CH340)
 
-L298N Motor Driver
+L298N motor driver
 
-Ultrasonic Sensor (HC-SR04 compatible)
+Ultrasonic sensor
 
-Servo Motor
+Servo motor
 
-IR Receiver (KY-022)
+IR receiver (KY-022)
 
-IR Remote Control
+Bluetooth module (HC-06 / ZS-040)
 
-Bluetooth Module (HC-06 / ZS-040)
+🎓 Educational Focus
+This project demonstrates embedded systems principles including peripheral integration, UART communication, real-time control, and multi-mode system architecture.
 
-DC Motors + Chassis
-
-💻 Software & Libraries
-
-Arduino IDE
-
-NewPing (Ultrasonic sensor handling)
-
-Servo
-
-IRremote
-
-SoftwareSerial
-
-📡 Control Summary
-Autonomous Mode
-
-Moves forward
-
-Detects obstacles ≤ 45 cm
-
-Reverses, scans left/right, and selects optimal direction
-
-IR Remote Mode
-
-UP → Forward
-
-DOWN → Backward
-
-LEFT → Turn Left
-
-RIGHT → Turn Right
-
-OK → Stop
-
-Bluetooth Mode (Android)
-
-F → Forward
-
-B → Backward
-
-L → Left
-
-R → Right
-
-S → Stop
-
-🎓 Educational Value
-
-This project demonstrates key embedded systems concepts:
-
-Peripheral integration
-
-Serial communication (UART)
-
-Real-time control logic
-
-Modular software design
-
-State machines and mode arbitration
-
-It goes beyond single-sensor examples by showing how multiple input sources can coexist in a reliable embedded system.
+With Mode switching commands check how to control the car depending on the command
