@@ -3,7 +3,7 @@ This repository contains multiple versions of an embedded robot car project deve
 Each version demonstrates a different control method, progressing from basic autonomous behavior to a fully integrated multi-mode system.
 
 📁 Project Versions
-1️⃣ Autonomous
+1️⃣ Autonomous(maincar)
 Ultrasonic-based obstacle avoidance
 
 Servo scanning for left/right distance measurement
