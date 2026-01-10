@@ -1,6 +1,7 @@
 🚗 Multi-Mode Embedded Robot Car
 This repository contains multiple versions of an embedded robot car project developed for an Embedded Systems course.
 Each version demonstrates a different control method, progressing from basic autonomous behavior to a fully integrated multi-mode system.
+for full report check the file named 210504516 Izzeldin Embedded_Systems_Term_Project_Report
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 📁 Project Versions
@@ -79,7 +80,6 @@ IR receiver (KY-022)
 
 Bluetooth module (HC-06 / ZS-040)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-for full report check the file named 210504516 Izzeldin Embedded_Systems_Term_Project_Report
 
 🎓 Educational Focus
 This project demonstrates embedded systems principles including peripheral integration, UART communication, real-time control, and multi-mode system architecture.
