@@ -4,7 +4,7 @@ Multi-mode embedded robot car featuring autonomous obstacle avoidance, IR remote
 
 This repository contains multiple versions of the project, developed for an Embedded Systems course. Each version demonstrates a different control method, progressing from basic autonomous behavior to a fully integrated multi-mode system.
 
-> For the full write-up, see `210504516 Izzeldin Embedded_Systems_Term_Project_Report`.
+> For the full write-up, see `project report.docx`.
 
 ---
 
